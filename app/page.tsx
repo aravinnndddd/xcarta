@@ -8,6 +8,7 @@ import { UGCSection } from "@/components/ugc-section";
 import { BlogSection } from "@/components/blog-section";
 import { ContactSection } from "@/components/contact-section";
 import { Footer } from "@/components/footer";
+import { About } from "@/components/about";
 
 export default function HomePage() {
   return (
@@ -15,8 +16,9 @@ export default function HomePage() {
       <Navigation />
       <main>
         <HeroSection />
-        <AboutSection />
-        <WhatWeDoSection />
+        {/* <AboutSection />
+        <WhatWeDoSection /> */}
+        <About />
         <FeaturedGamesSection />
         <DevelopersSection />
         <UGCSection />

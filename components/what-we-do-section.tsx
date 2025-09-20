@@ -42,91 +42,71 @@ export function WhatWeDoSection() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 px-6 w-[100vw]">
       <div className="container mx-auto max-w-6xl">
-        {/* Section Heading */}
+        {/* Heading */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
             What We Do
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
             Three core pillars that define our approach to interactive
             entertainment and creative empowerment.
           </p>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Cards */}
         <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.15 }}
               viewport={{ once: true }}
             >
-              <Card className="flex flex-col items-center justify-center border-2 border-white/10 bg-gradient-to-b from-white/5 to-white/0 hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all">
-                <CardContent className="p-8 group">
-                  {/* Icon with hover animation */}
-                  <motion.div
-                    className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center mb-6`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+              <Card className="relative border border-white/10 bg-white/5 backdrop-blur-md hover:scale-[1.02] hover:shadow-lg transition-all duration-300 rounded-xl">
+                <CardContent className="p-8">
+                  {/* Icon */}
+                  <div
+                    className={`w-14 h-14 mb-5 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center`}
                   >
-                    <service.icon className="h-8 w-8 text-white" />
-                  </motion.div>
+                    <service.icon className="h-7 w-7 text-white" />
+                  </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-6 text-pretty">
+                  <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
                     {service.description}
                   </p>
 
-                  {/* Feature List */}
-                  <motion.ul
-                    className="space-y-2 mb-6"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={{
-                      hidden: {},
-                      visible: {
-                        transition: { staggerChildren: 0.15 },
-                      },
-                    }}
-                  >
+                  {/* Features */}
+                  <ul className="space-y-2 text-sm mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <motion.li
-                        key={featureIndex}
-                        className="flex items-center text-sm text-muted-foreground"
-                        variants={{
-                          hidden: { opacity: 0, x: -10 },
-                          visible: { opacity: 1, x: 0 },
-                        }}
-                      >
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3" />
+                      <li key={featureIndex} className="flex items-center">
+                        <span className="w-2 h-2 rounded-full bg-primary mr-2" />
                         {feature}
-                      </motion.li>
+                      </li>
                     ))}
-                  </motion.ul>
+                  </ul>
 
-                  {/* Learn More Button */}
+                  {/* Button */}
                   <Button
                     variant="ghost"
-                    className="group/btn hover:bg-primary/10 w-full justify-between transition-colors"
+                    className="w-full justify-between hover:bg-primary/10"
                   >
                     Learn More
-                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </CardContent>
               </Card>
