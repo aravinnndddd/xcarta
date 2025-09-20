@@ -81,7 +81,7 @@ export function WhatWeDoSection() {
                 <CardContent className="p-8">
                   {/* Icon */}
                   <div
-                    className={`w-14 h-14 mb-5 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center`}
+                    className={`w-14 h-14 mb-5 rounded-xl flex items-center justify-center`}
                   >
                     <service.icon className="h-7 w-7 text-white" />
                   </div>

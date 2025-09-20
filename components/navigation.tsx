@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 // import { ModeToggle } from "@/components/mode-toggle";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 
 export function Navigation() {
   const [isExpanded, setIsExpanded] = useState(false);
