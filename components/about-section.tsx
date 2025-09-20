@@ -69,14 +69,14 @@ export function AboutSection() {
             <motion.div key={index} variants={itemVariants}>
               <Card className="flex flex-col items-center justify-center border-2 border-white/10 bg-gradient-to-b from-white/5 to-white/0 hover:from-white/10 hover:to-white/5 transition-all h-fit">
                 <CardContent className="px-2 text-center ">
-                  <h3 className="text-2xl font-bold mb-4 text-foreground">
+                  <h3 className="text-2xl font-bold mb-4 text-white">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground text-pretty border-b border-b-white h-[150px]">
                     {item.desc}
                   </p>
                   <h1
-                    className={`md:text-[150px] px-5 m-0 font-extrabold flex `}
+                    className={`md:text-[150px] px-5 m-0 text-white font-extrabold flex `}
                   >
                     {item.icon}
                   </h1>

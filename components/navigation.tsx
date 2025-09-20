@@ -25,7 +25,7 @@ export function Navigation() {
         className="custom-nav"
         ease="power2.easeOut"
         baseColor="#transparent"
-        pillColor="#C11A21"
+        pillColor="#2C5AB0"
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
       />

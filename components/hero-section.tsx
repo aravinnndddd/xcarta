@@ -30,7 +30,7 @@ export function HeroSection() {
         <div style={{ width: "100%", height: "800px", position: "relative" }}>
           <LightRays
             raysOrigin="top-center"
-            raysColor="#C11A21"
+            raysColor="#ffffff"
             raysSpeed={1.5}
             lightSpread={0.8}
             rayLength={1.2}
@@ -56,7 +56,7 @@ export function HeroSection() {
                 width={true}
                 weight={true}
                 italic={true}
-                textColor="#C11A21"
+                textColor="#2C5AB0"
                 strokeColor="#ff0000"
                 minFontSize={36}
               />
