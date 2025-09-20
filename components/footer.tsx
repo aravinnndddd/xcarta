@@ -1,6 +1,13 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Twitter, Instagram, Linkedin, MessageSquare, Mail, MapPin } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Twitter,
+  Instagram,
+  Linkedin,
+  MessageSquare,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -28,14 +35,14 @@ export function Footer() {
       { label: "Forums", href: "#forums" },
       { label: "Events", href: "#events" },
     ],
-  }
+  };
 
   const socialLinks = [
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: MessageSquare, href: "#", label: "Discord" },
-  ]
+  ];
 
   return (
     <footer className="bg-card border-t border-border">
@@ -53,8 +60,8 @@ export function Footer() {
             </Link>
 
             <p className="text-muted-foreground mb-6 text-pretty max-w-md">
-              Empowering creativity and redefining immersion through innovative game development, UGC ecosystems, and
-              transmedia experiences.
+              Empowering creativity and redefining immersion through innovative
+              game development, UGC ecosystems, and transmedia experiences.
             </p>
 
             <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
@@ -105,20 +112,31 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© 2024 XCARTA Interactive. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">
+            © 2025 XCARTA Interactive. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#privacy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link
+              href="#privacy"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="#terms" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link
+              href="#terms"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
+            >
               Terms of Service
             </Link>
-            <Link href="#cookies" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link
+              href="#cookies"
+              className="text-muted-foreground hover:text-primary text-sm transition-colors"
+            >
               Cookie Policy
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
