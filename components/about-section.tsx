@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Users } from "lucide-react";
+
 import { motion } from "framer-motion";
 
 export function AboutSection() {
@@ -21,7 +21,7 @@ export function AboutSection() {
   return (
     <motion.section
       id="about"
-      className="py-20 w-[100vw] px-4 sm:px-6 lg:px-8"
+      className="py-20  px-4 sm:px-6 lg:px-8"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

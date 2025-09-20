@@ -22,7 +22,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex  justify-center overflow-hidden">
+    <section className="relative min-h-screen flex  justify-center overflow-hidden ">
       {/* Animated Background */}
 
       {/* Background Image */}

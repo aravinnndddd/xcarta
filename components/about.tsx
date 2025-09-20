@@ -5,27 +5,26 @@ import { AboutSection } from "./about-section";
 import { WhatWeDoSection } from "./what-we-do-section";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CircularText from "./CircularText";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = containerRef.current;
-    const sections = container.querySelectorAll(".panel");
+    if (!container) return;
 
     const totalWidth = container.scrollWidth;
     const scrollDistance = totalWidth - window.innerWidth;
 
     gsap.to(container, {
-      x: () => `-${scrollDistance}px`, // translate X while scrolling
+      x: () => `-${scrollDistance}px`,
       ease: "none",
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: () => `+=${scrollDistance}`, // length of scroll
+        end: () => `+=${scrollDistance}`,
         scrub: true,
         pin: true,
         anticipatePin: 1,
@@ -39,11 +38,13 @@ export const About = () => {
 
   return (
     <div ref={containerRef} className="flex h-screen ">
+      {/* About Panel */}
       <div className="panel w-screen h-screen flex-shrink-0">
         <AboutSection />
       </div>
 
-      <div className="panel w-screen h-screen  flex-shrink-0">
+      {/* What We Do Panel */}
+      <div className="panel w-screen h-screen flex-shrink-0">
         <WhatWeDoSection />
       </div>
     </div>
