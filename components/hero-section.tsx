@@ -90,7 +90,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary/50  hover:bg-primary/10 text-lg px-8 py-6 bg-transparent"
+              className="border-primary/50  rounded-4xl  hover:bg-primary/10 text-lg px-8 py-6 bg-transparent"
             >
               <Play className="mr-2 h-5 w-5" />
               Watch Showcase
